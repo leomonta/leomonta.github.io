@@ -1,0 +1,27 @@
+{
+	"dependencies": {
+		"react": "^17.0.2",
+		"react-scripts": "^5.0.0",
+		"typescript": "^4.5.5"
+	},
+	"name": "leomonta.github.io",
+	"description": "This site live at [GitHub Pages](https://leomonta.github.io/index.html).",
+	"version": "1.0.0",
+	"main": "index.html",
+	"scripts": {
+		"test": "none"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/leomonta/leomonta.github.io.git"
+	},
+	"author": "Leonardo Montagner",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/leomonta/leomonta.github.io/issues"
+	},
+	"homepage": "https://github.com/leomonta/leomonta.github.io#readme",
+	"devDependencies": {
+		"@types/react": "^17.0.39"
+	}
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+
+		<link href="./style/base.css" rel="stylesheet" />
+
+		<script src="./built/index_utils.js"></script>
+
+		<title>AzureBits</title>
+	</head>
+	<body>
+		<navbar/>
+		<h2>AzureBits project</h2>
+		<a href="https://github.com/leomonta/AzureBits" target="blank">Github</a>
+
+		<hr />
+
+		<div>
+			AzureBits is a school project given to me for my IT class in high-school. The project
+			was originally thought for a web interface on a web browser. This is a simpler version
+			made before we knew anything about web development It was used to evaluate my proficiency
+			with java and sql
+			<br /><br />
+			This program has to simulate a multi-choice test on the CLI There are three levels of
+			users that can enter login into the system, each can do different things
+			<ul>
+				<li>
+					Administrator
+					<ul>
+						<li>manage all the users in the system: create, delete, edit</li>
+						<li>manage all the classes in the system: create, delete, edit</li>
+					</ul>
+				</li>
+				<li>
+					Teacher
+					<ul>
+						<li>manage their question: create, delete, edit</li>
+						<li>manage their test: crate, delete, edit</li>
+						<li>review assigned test and evaluate them</li>
+					</ul>
+				</li>
+				<li>
+					Student
+					<ul>
+						<li>complete the given tests</li>
+						<li>review all the corrected tests that have been ever taken</li>
+					</ul>
+				</li>
+			</ul>
+
+			All of these users must be already registered in the system and must login with a
+			password The program must be able to identify each user with their passwords, and
+			identify their user level and present the right menu with the right options
+		</div>
+
+		<!-- Option 1: Bootstrap Bundle with Popper -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
