@@ -11,6 +11,11 @@
 				"kind": "build",
 				"isDefault": true
 			},
+		},{
+			"label": "Replace simple components",
+			"type": "shell",
+			"command": "./CR_start",
+			"problemMatcher" : ""
 		}
 	]
 }
