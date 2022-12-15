@@ -4,6 +4,7 @@
 	"version": "1.0.0",
 	"main": "index.html",
 	"dependencies": {
+		"@types/node": "^18.11.2",
 		"typescript": "^4.5.5"
 	},
 	"scripts": {

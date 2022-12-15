@@ -15,7 +15,7 @@
 			"label": "Replace simple components",
 			"type": "shell",
 			"command": "./CR_start",
-			"problemMatcher" : ""
+			"problemMatcher" : "$go"
 		}
 	]
 }

@@ -1,6 +1,7 @@
 interface Repository {
 	name: string;
 	html_url: string;
+	fork: boolean
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {
@@ -12,24 +13,26 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 			data.forEach((repo: Repository) => {
 
-				// create a list item
-				let li = document.createElement("li");
-				
-				// and a link
-				let link = document.createElement("a");
+				if (!repo.fork) {
+					// create a list item
+					let li = document.createElement("li");
 
-				// set the link class and href
-				link.setAttribute("class", "dropdown-item");
-				link.setAttribute("href", `./projects/${repo.name}.html`);
+					// and a link
+					let link = document.createElement("a");
 
-				// gives it a name
-				link.innerText = repo.name;
+					// set the link class and href
+					link.setAttribute("class", "dropdown-item");
+					link.setAttribute("href", `./projects/${repo.name}.html`);
 
-				// add it to the list item
-				li.appendChild(link);
+					// gives it a name
+					link.innerText = repo.name;
 
-				// and add the list item to the nav dropdown
-				nav_projects.appendChild(li);
+					// add it to the list item
+					li.appendChild(link);
+
+					// and add the list item to the nav dropdown
+					nav_projects.appendChild(li);
+				}
 			});
 		});
 });
