@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 					// set the link class and href
 					link.setAttribute("class", "dropdown-item");
-					link.setAttribute("href", `./projects/${repo.name}.html`);
+					link.setAttribute("href", `/projects/${repo.name}.html`);
 
 					// gives it a name
 					link.innerText = repo.name;
