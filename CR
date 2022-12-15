@@ -70,8 +70,11 @@ def main():
 
 	new_file: str
 	for i in range(len(components_names)):
-		comp_target_name = "<"+components_names[i]+"/>"
-		new_file = target_file.replace(comp_target_name, components_bodies[i])
+		comp_target_name_comp = "<"+components_names[i]+"/>"
+		comp_target_name_long = "<"+components_names[i]+" />"
+		new_file = target_file.replace(comp_target_name_comp, components_bodies[i])
+		new_file = target_file.replace(comp_target_name_long, components_bodies[i])
+		target_file = new_file
 	
 	with open(target_filename, "w+") as f:
 		f.write(new_file)

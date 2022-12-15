@@ -1,16 +1,23 @@
 #!/bin/bash
 
-components=$(ls -1 src/components)
-components=${components/ /$'\n'/}
+comp_names=$(ls -1 src/components)
+comp_names=${comp_names/ /$'\n'/}
+
+components=""
+
+for comp in $comp_names; do
+	components="${components} ./src/components/${comp}"
+done
 
 echo $components
+echo
 
 for filename in ./projects/*; do
-	cmd="./CR ${filename} ./built/${filename} ./src/components/${components}"
+	cmd="./CR ${filename} ./built/${filename} ${components}"
 	echo $cmd
 	$cmd
 done
 
-cmd="./CR index.html built/index.html ./src/components/${components}"
+cmd="./CR index.html built/index.html ${components}"
 echo $cmd
 $cmd
