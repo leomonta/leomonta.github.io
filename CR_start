@@ -18,6 +18,6 @@ for filename in ./projects/*; do
 	$cmd
 done
 
-cmd="./CR index.html built/index.html ${components}"
+cmd="./CR src/index.html built/index.html ${components}"
 echo $cmd
 $cmd
