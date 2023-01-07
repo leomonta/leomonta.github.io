@@ -1,0 +1,13 @@
+* {
+	font-family: Consolas;
+}
+
+.dead-link {
+	text-decoration: none;
+	color: black;
+}
+
+.dead-link:hover {
+	text-decoration: none;
+	color: black;
+}
