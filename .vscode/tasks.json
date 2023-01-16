@@ -6,16 +6,29 @@
 		{
 			"label": "tsc compile",
 			"type": "shell",
-			"command": "npx tsc",
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			},
-		},{
+			"command": "./scripts/tsc_compile.sh",
+			"problemMatcher": [ ]
+		},
+		{
 			"label": "Replace simple components",
 			"type": "shell",
-			"command": "./CR_start",
-			"problemMatcher" : "$go"
+			"command": "./scripts/component_replacer.sh"
+		},
+		{
+			"label": "copy style folder",
+			"type": "shell",
+			"command": "./scripts/copy_style.sh",
+			"problemMatcher": [ ]
+		},
+		{
+			"label": "compile tailwind css",
+			"type": "shell",
+			"command": "./scripts/compile_tailwindcss.sh"
+		},
+		{
+			"label": "build everything",
+			"type": "shell",
+			"command": "./scripts/build_all.sh"
 		}
 	]
 }
