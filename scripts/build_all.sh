@@ -1,8 +1,7 @@
 #!/bin/bash
 
-./component_replacer.sh
+./scripts/component_replacer.sh
 
+./scripts/tsc_compile.sh
 
-./tsc_compile.sh
-
-./compile_tailwindcss.sh
+./scripts/compile_tailwindcss.sh

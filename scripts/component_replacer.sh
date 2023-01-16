@@ -12,15 +12,12 @@ for comp in $comp_names; do
 	components="${components} ./src/components/${comp}"
 done
 
-echo $components
-echo
-
 for filename in ./projects/*; do
-	cmd="./CR ${filename} ./build/${filename} ${components}"
+	cmd="./scripts/CR ${filename} ./build/${filename} ${components}"
 	echo $cmd
 	$cmd
 done
 
-cmd="./CR src/index.html build/index.html ${components}"
+cmd="./scripts/CR src/index.html build/index.html ${components}"
 echo $cmd
 $cmd

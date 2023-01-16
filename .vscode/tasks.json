@@ -23,7 +23,8 @@
 		{
 			"label": "build everything",
 			"type": "shell",
-			"command": "./scripts/build_all.sh"
+			"command": "./scripts/build_all.sh",
+			"problemMatcher": [ ]
 		}
 	]
 }
