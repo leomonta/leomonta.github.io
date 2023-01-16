@@ -12,7 +12,7 @@ for comp in $comp_names; do
 	components="${components} ./src/components/${comp}"
 done
 
-for filename in ./projects/*; do
+for filename in ./src/projects/*; do
 	cmd="./scripts/CR ${filename} ./build/${filename} ${components}"
 	echo $cmd
 	$cmd
