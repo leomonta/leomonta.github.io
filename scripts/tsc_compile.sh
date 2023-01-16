@@ -1,5 +1,6 @@
 #!/bin/bash
 
-CMD="npx tsc"
-echo $CMD
-$CMD
+source colors
+
+printf "${BBlue}npx${Cyan} tsc${Reset}\n"
+npx tsc

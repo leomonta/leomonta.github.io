@@ -12,7 +12,8 @@
 		{
 			"label": "Replace simple components",
 			"type": "shell",
-			"command": "./scripts/component_replacer.sh"
+			"command": "./scripts/component_replacer.sh",
+			"problemMatcher": [ ]
 		},
 		{
 			"label": "compile tailwind css",

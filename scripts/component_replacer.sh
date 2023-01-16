@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source colors
 
 # --- Conponent replacer ---
 
@@ -13,11 +14,10 @@ for comp in $comp_names; do
 done
 
 for filename in ./src/projects/*; do
-	cmd="./scripts/CR ${filename} ./build/${filename} ${components}"
-	echo $cmd
-	$cmd
+	file_dest=$(echo $filename | rev | cut -d'/' -f-2 | rev)
+	printf "${BBlue}./scripts/CR${Cyan} ${filename} ./build/${file_dest} ${components}${Reset}\n"
+	./scripts/CR ${filename} ./build/${file_dest} ${components}
 done
 
-cmd="./scripts/CR src/index.html build/index.html ${components}"
-echo $cmd
-$cmd
+printf "${BBlue}./scripts/CR${Cyan} src/index.html build/index.html ${components}${Reset}\n"
+./scripts/CR src/index.html build/index.html $components
