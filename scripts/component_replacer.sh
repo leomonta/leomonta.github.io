@@ -16,11 +16,11 @@ echo $components
 echo
 
 for filename in ./projects/*; do
-	cmd="./CR ${filename} ./built/${filename} ${components}"
+	cmd="./CR ${filename} ./build/${filename} ${components}"
 	echo $cmd
 	$cmd
 done
 
-cmd="./CR src/index.html built/index.html ${components}"
+cmd="./CR src/index.html build/index.html ${components}"
 echo $cmd
 $cmd

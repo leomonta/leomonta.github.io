@@ -2,7 +2,6 @@
 
 ./component_replacer.sh
 
-./copy_style.sh
 
 ./tsc_compile.sh
 

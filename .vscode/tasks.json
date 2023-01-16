@@ -15,15 +15,10 @@
 			"command": "./scripts/component_replacer.sh"
 		},
 		{
-			"label": "copy style folder",
-			"type": "shell",
-			"command": "./scripts/copy_style.sh",
-			"problemMatcher": [ ]
-		},
-		{
 			"label": "compile tailwind css",
 			"type": "shell",
-			"command": "./scripts/compile_tailwindcss.sh"
+			"command": "./scripts/compile_tailwindcss.sh",
+			"problemMatcher": [ ]
 		},
 		{
 			"label": "build everything",
