@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.dropdown {
+	display: inline-block;
+	position: relative;
+}
+
+.dropdown-options {
+	display: none;
+	position: absolute;
+	overflow: auto;
+}
+
+/* .dropdown-options div {
+	display: none;
+} */
+.dropdown-options a {
+	display: block;
+}
+
+.dropdown:hover .dropdown-options {
+	display: block;
+}
+

@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
         data.forEach(function (repo) {
             if (!repo.fork) {
                 // create a list item
-                var li = document.createElement("li");
+                // let li = document.createElement("li");
                 // and a link
                 var link = document.createElement("a");
                 // set the link class and href
@@ -17,9 +17,9 @@ window.addEventListener("DOMContentLoaded", function (event) {
                 // gives it a name
                 link.innerText = repo.name;
                 // add it to the list item
-                li.appendChild(link);
+                // li.appendChild(link);
                 // and add the list item to the nav dropdown
-                nav_projects.appendChild(li);
+                nav_projects.appendChild(link);
             }
         });
     });
