@@ -26,6 +26,13 @@
 			"type": "shell",
 			"command": "./scripts/build_all.sh",
 			"problemMatcher": [ ]
+		},
+		{
+
+			"label": "update my css",
+			"type": "shell",
+			"command": "./scripts/css_copy.sh",
+			"problemMatcher": [ ]
 		}
 	]
 }
