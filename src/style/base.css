@@ -1,7 +1,10 @@
 .navbar {
 	list-style-type: none;
+	background-color: #aaa;
 	margin: 0;
-	padding: 0;
+	text-decoration: none;
+	color: black;
+	padding: 0.5rem;
 }
 
 .dropdown {
@@ -9,18 +12,25 @@
 	position: relative;
 }
 
+.navbar a {
+	text-decoration: none;
+	color: black;
+}
+
 .dropdown-options {
 	display: none;
 	position: absolute;
 	overflow: auto;
+	background-color: #ccc;
+	padding: 0.5rem;
 }
 
-/* .dropdown-options div {
-	display: none;
-} */
 .dropdown-options a {
 	display: block;
-	background-color: aqua;
+	padding: 2px;
+	border-color: black;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
 }
 
 .dropdown:hover .dropdown-options {
