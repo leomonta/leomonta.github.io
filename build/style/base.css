@@ -4,17 +4,26 @@
 	margin: 0;
 	text-decoration: none;
 	color: black;
+	font-size: medium;
 	padding: 0.5rem;
 }
 
 .dropdown {
 	display: inline-block;
 	position: relative;
+	font-size: medium;
 }
 
 .navbar a {
 	text-decoration: none;
 	color: black;
+}
+
+#nav-home {
+	font-size: larger;
+	font-weight: bold;
+	padding: 1rem;
+	display: inline;
 }
 
 .dropdown-options {
