@@ -1,32 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- Required meta tags -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link href="/style/base.css" rel="stylesheet" />
+	<script src="/index_utils.js"></script>
 
-<script src="/index_utils.js"></script>
+	<style>
+		body {
+			font-family: Consolas;
+		}
+	</style>
 
+	<title>My homepage</title>
+</head>
+<body>
+	<nav style="background-color: #aaa; padding: 0.5rem; margin: 0; color: black;">
+		<div id="nav-home" style="display: inline; padding: 1rem;">
+			<a style="text-decoration: none; color: black;" href="/index.html">Home</a>
+		</div>
+		<div class="dropdown" style="display: inline;">
+			My projects (WIP)
+		</div>
+	</nav>
 
-		<title>Project Directory</title>
-	</head>
-	<body>
-		<nav class="navbar">
-	<div id="nav-home">
-		<a href="/index.html">Home</a>
-	</div>
-	<div class="dropdown">
-		My projects
-		<div id="gh-projects" class="dropdown-options"></div>
-	</div>
-</nav>
-
-
-		<h1 class="centered main-title">
-			Hi there. Welcome to my homepage
+	<div style="margin-left: 25rem; margin-right: 25rem;">
+		<h1 style="text-align: center;">
+			Welcome to my homepage
 		</h1>
-	</body>
+		<br><br>
+		<h2>
+			Hi! My name is Leonard
+		</h2>
+		<p style="font-size: large;">
+			I am an International studen at bishop's University in Quebec Canada<br>
+			I actually come from Italy, near Venice
+			<br><br>
+			I am passionate about Computer Science,<em>in particular low level programming with C</em>, cars &amp music
+			<br><br>
+			My top projects right now is a simple HTTP/1.1 Server written in C/C++ <br>
+			It can be found, like my other porjects, on <strong><a style="color: black;" href="https://github.com/leomonta/sns">Github</a></strong><br>
+			<br>
+			I managed to put a couple of features in there
+
+			<ol>
+				<li>OpenSSL supoort for https</li>
+				<li>Automatic index.html on '/' requests</li>
+				<li>FTP like dirview if not index.html is not found on '/'</li>
+				<ul>
+					A couple of methods
+					<li>HEAD</li>
+					<li>GET</li>
+					<li>POST (next)</li>
+				</ul>
+			</ol>
+
+		</p>
+
+		<hr>
+
+	</div>
+</body>
 </html>
 
