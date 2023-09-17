@@ -72,20 +72,23 @@ def main():
 	with open(base_filename) as base:
 		target_file = base.read()
 
-	new_file: str
+	new_file: str = ""
 	for i in range(len(components_names)):
 		comp_target_name_comp = "<" + components_names[i] + "/>"
 		comp_target_name_long = "<" + components_names[i] + " />"
-		new_file = target_file.replace(
-		    comp_target_name_comp, components_bodies[i]
-		)
-		new_file = target_file.replace(
-		    comp_target_name_long, components_bodies[i]
-		)
+		
+		if target_file.find(comp_target_name_comp) != -1:
+			new_file = target_file.replace(
+				comp_target_name_comp, components_bodies[i]
+			)
+		if target_file.find(comp_target_name_long) != -1:
+			new_file = target_file.replace(
+				comp_target_name_long, components_bodies[i]
+			)
 		target_file = new_file
 
 	with open(target_filename, "w+") as f:
-		f.write(new_file)
+		f.write(target_file)
 
 
 if __name__ == "__main__":
