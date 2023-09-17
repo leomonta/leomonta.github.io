@@ -22,16 +22,16 @@
 			"problemMatcher": [ ]
 		},
 		{
-			"label": "build everything",
+			"label": "build all",
 			"type": "shell",
 			"command": "./scripts/build_all.sh",
 			"problemMatcher": [ ]
 		},
 		{
 
-			"label": "update my css",
+			"label": "copy everything",
 			"type": "shell",
-			"command": "./scripts/css_copy.sh",
+			"command": "./scripts/copy_everything.sh",
 			"problemMatcher": [ ]
 		}
 	]

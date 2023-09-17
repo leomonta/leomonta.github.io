@@ -4,13 +4,13 @@ source colors
 
 # --- Conponent replacer ---
 
-comp_names=$(ls -1 src/components)
+comp_names=$(ls -1 ./components)
 comp_names=${comp_names/ /$'\n'/}
 
 components=""
 
 for comp in $comp_names; do
-	components="${components} ./src/components/${comp}"
+	components="${components} ./components/${comp}"
 done
 
 for filename in ./src/projects/*; do

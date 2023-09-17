@@ -1,33 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<!-- Required meta tags -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<link href="/style/base.css" rel="stylesheet" />
-
-<script src="/index_utils.js"></script>
-
-
-		<title>Project Directory</title>
-	</head>
-	<body>
-		<nav class="navbar">
-	<div id="nav-home">
-		<a href="/index.html">Home</a>
-	</div>
-	<div class="dropdown">
-		My projects
-		<div id="gh-projects" class="dropdown-options"></div>
-	</div>
-</nav>
-
-
-		<h1 class="centered main-title">
-			Hi there. Welcome to my homepage
-		</h1>
-		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
 	<!-- Six diamonds -->
 	<path fill="rgb(255,0,0)" stroke="none" paint-order="stroke fill markers"
@@ -82,7 +53,3 @@
 		stroke-miterlimit="10" stroke-width="0.07" />
 
 </svg>
-
-	</body>
-</html>
-

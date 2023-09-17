@@ -2,14 +2,14 @@
 
 source colors
 
-printf "${BGreen} --- Replacing components ---${Reset}\n\n"
+printf "${BGreen} --- Copying everything as base ---${Reset}\n\n"
+
+./scripts/copy_everything.sh
+
+printf "\n${BGreen} --- Replacing components ---${Reset}\n\n"
 
 ./scripts/component_replacer.sh
 
 printf "\n${BGreen} --- Compiling typescript files ---${Reset}\n\n"
 
 ./scripts/tsc_compile.sh
-
-printf "\n${BGreen} --- Copying my css file ---${Reset}\n\n"
-
-./scripts/css_copy.sh
