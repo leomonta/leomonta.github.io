@@ -69,8 +69,12 @@ def main():
 			components_bodies.append(component.read())
 
 	target_file: str
-	with open(base_filename) as base:
-		target_file = base.read()
+	try:
+		with open(base_filename) as base:
+			target_file = base.read()
+	except IsADirectoryError:
+		print(base_filename + " is a directory, doing nothing")
+		exit(1)
 
 	for i in range(len(components_names)):
 		comp_target_name_comp = "<" + components_names[i] + "/>"
