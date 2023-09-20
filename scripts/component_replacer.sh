@@ -15,7 +15,7 @@ done
 
 for filename in ./src/projects/*; do
 	file_dest=$(echo $filename | rev | cut -d'/' -f-2 | rev)
-	printf "${BBlue}./scripts/CR${Cyan} ${filename} ./build/${file_dest} ${components}${Reset}\n"
+	printf "${BBlue}./scripts/CR${Cyan} ${filename} ./build/${file_dest}${components}${Reset}\n"
 	./scripts/CR ${filename} ./build/${file_dest} ${components}
 done
 
