@@ -12,8 +12,8 @@
 	</head>
 	<body>
 		<navbar />
-		<div style="margin-left: 25rem; margin-right: 25rem">
-			<h1 style="text-align: center">Welcome to my homepage</h1>
+		<div class="big-lr-margins">
+			<h1 class="centered">Welcome to my homepage</h1>
 			<br /><br />
 			<h2>Hi! My name is Leonard</h2>
 			<p style="font-size: large">
@@ -24,7 +24,7 @@
 					>in particular low level programming with C</em
 				>, cars &amp music <br /><br />
 				My top projects right now is a simple HTTP/1.1 Server written in C/C++ <br />
-				It can be found, like my other porjects, on
+				It can be found, like my other projects, on
 				<strong
 					><a style="color: black" href="https://github.com/leomonta/sns"
 						>Github</a
@@ -38,16 +38,61 @@
 				<li>Automatic index.html on '/' requests</li>
 				<li>FTP like dirview if not index.html is not found on '/'</li>
 				<ul>
-					A couple of methods
-					<li>HEAD</li>
-					<li>GET</li>
-					<li>POST (next)</li>
+
 				</ul>
 			</ol>
 
-			<div style="width: 50px; height: 50px">
-				<rokubishi_normal />
-			</div>
+				<h4>
+					Supported Methods
+				</h4>
+				<table class="auto-lr-margins" style="font-size: small;" border="1">
+					<tbody class="centered">
+						<tr style="font-style: normal;">
+							<th>
+								GET
+							</th>
+							<th>
+								HEAD
+							</th>
+							<th>
+								POST
+							</th>
+							<th>
+								PUT
+							</th>
+							<th>
+								DELETE
+							</th>
+							<th>
+								CONNECT
+							</th>
+							<th>
+								OPTIONS
+							</th>
+							<th>
+								TRACE
+							</th>
+							<th>
+								PATCH
+							</th>
+						</tr>
+
+						<tr>
+							<td>&check;</td>
+							<td>&check;</td>
+							<td>&#x274C;</td>
+							<td>&#x274C;</td>
+							<td>&#x274C;</td>
+							<td>&#x274C;</td>
+							<td>&#x274C;</td>
+							<td>&#x274C;</td>
+							<td>&#x274C;</td>
+						</tr>
+					</tbody>
+
+				</table>
+
+
 		</div>
 		<bootstrapFooter />
 	</body>
