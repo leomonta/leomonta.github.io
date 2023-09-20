@@ -9,6 +9,6 @@
 		"esModuleInterop": true
 	},
 	"include": [
-		"./build/*"
+		"./src/index_utils.ts"
 	]
 }
