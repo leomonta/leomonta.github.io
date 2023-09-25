@@ -63,3 +63,8 @@ a:hover {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.rokus img {
+	width: 25px;
+	height: 25px;
+}
