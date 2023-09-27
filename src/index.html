@@ -3,110 +3,34 @@
 	<head>
 		<headCommon />
 
-		<title>Project Director</title>
+		<title>Index</title>
 		<style>
-			body {
-				font-family: Consolas;
+			.bg {
+				background: url("./res/bg.jpg");
+				width: 100vw; /* 100% of ViewportWidth */
+				height: 100vh; /* 100% of ViewportHeight */
+				background-color: #F3F1E9; /* Bianco panna */
+
+				position: fixed;
+				top: 0;
+				left: 0;
 			}
 		</style>
 	</head>
 	<body>
-		<navbar />
-		<div class="big-lr-margins">
-			<h1 class="centered">Welcome to my homepage</h1>
-			<br /><br />
-			<h2>Hi! My name is Leonard</h2>
-			<p style="font-size: large">
-				I am an International studen at bishop's University in Quebec Canada<br />
-				I actually come from Italy, near Venice
+		<div class="bg">
+			<navbar />
+			<div class="big-lr-margins">
+				<h1 class="centered">Welcome to my homepage</h1>
 				<br /><br />
-				I am passionate about Computer Science,<em
-					>in particular low level programming with C</em
-				>, cars &amp music <br /><br />
-				My top projects right now is a simple HTTP/1.1 Server written in C/C++ <br />
-				It can be found, like my other projects, on
-				<strong
-					><a style="color: black" href="https://github.com/leomonta/sns"
-						>Github</a
-					></strong
-				><br />
-				<br />
-				I managed to put a couple of features in there
-			</p>
-			<ol>
-				<li>OpenSSL supoort for https</li>
-				<li>Automatic index.html on '/' requests</li>
-				<li>FTP like dirview if not index.html is not found on '/'</li>
-				<ul>
-
-				</ul>
-			</ol>
-
-				<h4>
-					Supported Methods
-				</h4>
-				<table class="auto-lr-margins" style="font-size: small;" border="1">
-					<tbody class="centered">
-						<tr style="font-style: normal;">
-							<th>
-								GET
-							</th>
-							<th>
-								HEAD
-							</th>
-							<th>
-								POST
-							</th>
-							<th>
-								PUT
-							</th>
-							<th>
-								DELETE
-							</th>
-							<th>
-								CONNECT
-							</th>
-							<th>
-								OPTIONS
-							</th>
-							<th>
-								TRACE
-							</th>
-							<th>
-								PATCH
-							</th>
-						</tr>
-
-						<tr class="rokus">
-							<td><img src="res/rokubishi_green.svg" alt="yes"></td>
-							<td><img src="res/rokubishi_green.svg" alt="yes"></td>
-							<td><img src="res/rokubishi.svg" alt="no"></td>
-							<td><img src="res/rokubishi.svg" alt="no"></td>
-							<td><img src="res/rokubishi.svg" alt="no"></td>
-							<td><img src="res/rokubishi.svg" alt="no"></td>
-							<td><img src="res/rokubishi.svg" alt="no"></td>
-							<td><img src="res/rokubishi.svg" alt="no"></td>
-							<td><img src="res/rokubishi.svg" alt="no"></td>
-						</tr>
-
-						<!--
-						<tr>
-							<td>&check;</td>
-							<td>&check;</td>
-							<td>&#x274C;</td>
-							<td>&#x274C;</td>
-							<td>&#x274C;</td>
-							<td>&#x274C;</td>
-							<td>&#x274C;</td>
-							<td>&#x274C;</td>
-							<td>&#x274C;</td>
-						</tr>
-						-->
-					</tbody>
-
-				</table>
-
-
+				<h2>Hi! My name is Leonard</h2>
+				<p style="font-size: large">
+					I am an International studen at bishop's University in Quebec Canada<br />
+					I actually come from Italy, near Venice
+					<br /><br />
+					I am passionate about Computer Science,<em>in particular low level programming with C</em>, cars &amp music <br /><br />
+				</p>
+			</div>
 		</div>
 		<bootstrapFooter />
 	</body>
