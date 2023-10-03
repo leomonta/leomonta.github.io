@@ -19,5 +19,5 @@ for filename in ./src/projects/*; do
 	./scripts/CR ${filename} ./build/${file_dest} ${components}
 done
 
-printf "${BBlue}./scripts/CR${Cyan} src/index.html build/index.html ${components}${Reset}\n"
-./scripts/CR src/index.html build/index.html $components
+printf "${BBlue}./scripts/CR${Cyan} src/index.html build/index.html${components}${Reset}\n"
+./scripts/CR src/index.html build/index.html$components

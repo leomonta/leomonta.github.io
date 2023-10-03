@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
                 var link = document.createElement("a");
                 // set the link class and href
                 link.setAttribute("class", "dropdown-item");
-                link.setAttribute("href", "./projects/".concat(repo.name, ".html"));
+                link.setAttribute("href", "/projects/".concat(repo.name, ".html"));
                 // gives it a name
                 link.innerText = repo.name;
                 // add it to the list item

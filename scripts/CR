@@ -79,9 +79,9 @@ def main():
 		comp_pos_start = base_file.find("<" + components_names[i])
 
 		if comp_pos_start == -1:
-			break
+			continue
 
-		comp_pos_end = base_file[comp_pos_start:].find("/>") + comp_pos_start # ignore the /> on purpuse 
+		comp_pos_end = base_file[comp_pos_start:].find("/>") + comp_pos_start  # ignore the /> on purpuse
 
 		comp_tag: str = base_file[comp_pos_start:comp_pos_end]
 
@@ -95,15 +95,14 @@ def main():
 			parts = el.split("=")
 
 			if len(parts) == 2:
-				
 				props[parts[0]] = parts[1]
 
 		new_comp = components_content[i]
-	
+
 		for name in props:
 			new_comp = new_comp.replace(f"~{name}~", props[name])
 
-		base_file = base_file.replace(base_file[comp_pos_start:comp_pos_end+2], new_comp)
+		base_file = base_file.replace(base_file[comp_pos_start:comp_pos_end + 2],"\n" + new_comp)
 
 	with open(output_path, "w+") as f:
 		f.write(base_file)

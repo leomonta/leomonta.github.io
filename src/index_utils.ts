@@ -18,11 +18,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
 					// let li = document.createElement("li");
 
 					// and a link
-					let link = document.createElement("a");
+					const link = document.createElement("a");
 
 					// set the link class and href
 					link.setAttribute("class", "dropdown-item");
-					link.setAttribute("href", `./projects/${repo.name}.html`);
+					link.setAttribute("href", `/projects/${repo.name}.html`);
 
 					// gives it a name
 					link.innerText = repo.name;
