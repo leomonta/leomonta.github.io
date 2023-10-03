@@ -49,48 +49,64 @@ def main():
 	num = len(sys.argv)
 
 	if num < 4:
-		print(
-		    f"{COLORS.FG_RED}At least 3 arguments needed. {num} provided.{COLORS.RESET}"
-		)
+		print(f"{COLORS.FG_RED}At least 3 arguments needed. {num} provided.{COLORS.RESET}")
 		quit(1)
 
-	base_filename = sys.argv[1]
-	target_filename = sys.argv[2]
-	source_filenames = sys.argv[3:]
+	base_path = sys.argv[1]
+	output_path = sys.argv[2]
+	component_paths = sys.argv[3:]
 
 	components_names: list[str] = []
-	components_bodies: list[str] = []
+	components_content: list[str] = []
 
-	for comp_filename in source_filenames:
-		components_names.append(
-		    os.path.basename(os.path.splitext(comp_filename)[0])
-		)
+	for comp_filename in component_paths:
+		# take the path and reduce it to only the filename
+		components_names.append(os.path.basename(os.path.splitext(comp_filename)[0]))
 		with open(comp_filename) as component:
-			components_bodies.append(component.read())
+			components_content.append(component.read())
 
-	target_file: str
+	base_file: str
 	try:
-		with open(base_filename) as base:
-			target_file = base.read()
+		with open(base_path) as base:
+			base_file = base.read()
 	except IsADirectoryError:
-		print(base_filename + " is a directory, doing nothing")
+		print(base_path + " is a directory, doing nothing")
 		exit(1)
 
 	for i in range(len(components_names)):
-		comp_target_name_comp = "<" + components_names[i] + "/>"
-		comp_target_name_long = "<" + components_names[i] + " />"
-		
-		if target_file.find(comp_target_name_comp) != -1:
-			target_file = target_file.replace(
-				comp_target_name_comp, components_bodies[i]
-			)
-		if target_file.find(comp_target_name_long) != -1:
-			target_file = target_file.replace(
-				comp_target_name_long, components_bodies[i]
-			)
+		# simple conponent withou props and closing />
 
-	with open(target_filename, "w+") as f:
-		f.write(target_file)
+		comp_pos_start = base_file.find("<" + components_names[i])
+
+		if comp_pos_start == -1:
+			break
+
+		comp_pos_end = base_file[comp_pos_start:].find("/>") + comp_pos_start # ignore the /> on purpuse 
+
+		comp_tag: str = base_file[comp_pos_start:comp_pos_end]
+
+		props: dict[str, str] = {}
+
+		elements = comp_tag.split()
+
+		# print(elements, comp_tag)
+
+		for el in elements:
+			parts = el.split("=")
+
+			if len(parts) == 2:
+				
+				props[parts[0]] = parts[1]
+
+		new_comp = components_content[i]
+	
+		for name in props:
+			new_comp = new_comp.replace(f"~{name}~", props[name])
+
+		base_file = base_file.replace(base_file[comp_pos_start:comp_pos_end+2], new_comp)
+
+	with open(output_path, "w+") as f:
+		f.write(base_file)
 
 
 if __name__ == "__main__":
