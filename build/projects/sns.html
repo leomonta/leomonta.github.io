@@ -58,7 +58,8 @@
 		</ol>
 
 		<p class="centered">
-			This Project is open source and it's hosted on github at <a href="https://leomonta.github.io/build/">leomonta/sns</a>
+			This Project is open source and it's hosted on github at <a
+				href="https://leomonta.github.io/build/">leomonta/sns</a>
 		</p>
 
 		<hr>
@@ -114,6 +115,63 @@
 
 			</table>
 		</div>
+
+		<hr>
+
+		The Server is also capable of parsing form data from simple forms like
+
+		<div class="form-spacer">
+			<!-- <form action="/jensen/echo.php" method="GET"> -->
+			<form action="https://osiris.ubishops.ca/jensen/echo.php" method="POST">
+
+				<input type="email" name="email" class="simple-input" placeholder="Your email">
+				<br>
+				<br>
+				<textarea rows="5" name="details" class="simple-input"></textarea>
+				<br><br>
+				<label for="reason">Why you are contacting me?</label>
+				<br>
+				<input type="radio" id="work" name="reason" value="work">
+				<label for="work">Work</label>
+				<br>
+				<input type="radio" id="hobby" name="reason" value="hobby">
+				<label for="hobby">Hobby / interest</label>
+				<br><br>
+				<input type="submit" name="submit" value="submit" class="simple-input submit-button">
+				<input type="reset" name="reset" value="reset" class="simple-input reset-button">
+				<div class="clearfix"></div>
+			</form>
+		</div>
+
+		<div class="auto-lr-margins">
+			<h4>
+				Supported Methods
+			</h4>
+			<table class="feature-table">
+				<tbody class="centered">
+					<tr style="font-style: normal;">
+						<th>
+							application form urlencoded
+						</th>
+						<th>
+							plain text
+						</th>
+						<th>
+							multipart form-data
+						</th>
+					</tr>
+
+					<tr>
+						<td>&check;</td>
+						<td>&check;</td>
+						<td>&#x274C;</td>
+					</tr>
+				</tbody>
+
+			</table>
+
+		</div>
+
 	</div>
 </body>
 

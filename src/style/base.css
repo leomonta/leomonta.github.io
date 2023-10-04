@@ -81,3 +81,48 @@ a:hover {
 .feature-table tbody {
 	border: solid black
 }
+
+.form-spacer {
+	padding: 2vh;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+	border: 1px solid grey;
+	border-radius: 10px;
+}
+
+.no-resize {
+	resize: none;
+}
+
+.no-border {
+	border: none;
+}
+
+.simple-input {
+	resize: none;
+	background-color: rgba(255, 255, 255, 0);
+	border: 1px solid grey;
+	border-radius: 2px;
+	width: 100%;
+}
+
+.no-bg-col {
+	background-color: rgba(255, 255, 255, 0)
+}
+
+.submit-button {
+	background-color: lightgreen;
+	float: right;
+	width: auto;
+}
+
+.reset-button {
+	background-color: lightblue;
+	float: left;
+	width: auto;
+}
+
+.clearfix {
+	float: none;
+	clear: both;
+}
