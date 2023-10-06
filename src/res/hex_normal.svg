@@ -1,0 +1,18 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2" height="2">
+
+	<!-- Border -->
+	<path fill="none" stroke="black" paint-order="fill stroke markers" d="M 1.0000 0.0000 L 1.2887 0.1667 L 1.0000 2.0000 L 0.7113 0.1667 Z" stroke-opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.07" />
+	<path fill="none" stroke="black" paint-order="fill stroke markers" d="M 1.8660 0.5000 L 1.8660 0.8333 L 0.1340 1.5000 L 1.5774 0.3333 Z" stroke-opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.07" />
+	<path fill="none" stroke="black" paint-order="fill stroke markers" d="M 1.8660 1.5000 L 1.5774 1.6667 L 0.1340 0.5000 L 1.8660 1.1667 Z" stroke-opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.07" />
+	<path fill="none" stroke="black" paint-order="fill stroke markers" d="M 1.0000 2.0000 L 0.7113 1.8333 L 1.0000 0.0000 L 1.2887 1.8333 Z" stroke-opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.07" />
+	<path fill="none" stroke="black" paint-order="fill stroke markers" d="M 0.1340 1.5000 L 0.1340 1.1667 L 1.8660 0.5000 L 0.4226 1.6667 Z" stroke-opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.07" />
+	<path fill="none" stroke="black" paint-order="fill stroke markers" d="M 0.1340 0.5000 L 0.4226 0.3333 L 1.8660 1.5000 L 0.1340 0.8333 Z" stroke-opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.07" />
+
+	<!-- Six symbols-->
+	<path fill="black" stroke="none" paint-order="stroke fill" fill-rule="evenodd" d="M 1.0000 0.0000 L 1.2887 0.1667 L 1.0000 2.0000 L 0.7113 0.1667 Z" fill-opacity="1" />
+	<path fill="black" stroke="none" paint-order="stroke fill" fill-rule="evenodd" d="M 1.8660 0.5000 L 1.8660 0.8333 L 0.1340 1.5000 L 1.5774 0.3333 Z" fill-opacity="1" />
+	<path fill="black" stroke="none" paint-order="stroke fill" fill-rule="evenodd" d="M 1.8660 1.5000 L 1.5774 1.6667 L 0.1340 0.5000 L 1.8660 1.1667 Z" fill-opacity="1" />
+	<path fill="black" stroke="none" paint-order="stroke fill" fill-rule="evenodd" d="M 1.0000 2.0000 L 0.7113 1.8333 L 1.0000 0.0000 L 1.2887 1.8333 Z" fill-opacity="1" />
+	<path fill="black" stroke="none" paint-order="stroke fill" fill-rule="evenodd" d="M 0.1340 1.5000 L 0.1340 1.1667 L 1.8660 0.5000 L 0.4226 1.6667 Z" fill-opacity="1" />
+	<path fill="black" stroke="none" paint-order="stroke fill" fill-rule="evenodd" d="M 0.1340 0.5000 L 0.4226 0.3333 L 1.8660 1.5000 L 0.1340 0.8333 Z" fill-opacity="1" />
+</svg>
