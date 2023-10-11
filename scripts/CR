@@ -44,6 +44,58 @@ class COLORS:
 	RESET = '\033[0m'
 
 
+# Should be more that enought to not interfere with any genuine use
+MAX_REPETITIONS = 100
+
+
+def get_compiled_component(component: str, props: dict[str, str]) -> str:
+	"""
+	Parse the component searching for default prop intializers
+
+	returns the found props at pos 0 and the component stripped of the default initializers at the start
+	"""
+
+	curr_start = 0
+	defaults: dict[str, str] = {}
+
+	# line by line
+	while True:
+
+		# to be a valid default setup it has to start at the first of the line and be at the top of the file
+		if component[curr_start] != "~":
+			break
+
+		end_line = component.find("\n", curr_start)
+
+		# end of the file
+		if end_line < 0:
+			break
+
+		closing_tilde = component.find("~", curr_start + 1, end_line)
+
+		# we have a prop name
+		if closing_tilde >= 0:
+			parts = component[curr_start:end_line].split("=", 1)
+
+			# we have a prop value
+			if len(parts) == 2:
+				parts[0] = parts[0].strip("~")
+				defaults[parts[0]] = parts[1]
+
+		curr_start = end_line + 1
+
+	# merges the two dict together and replace any duplicate name from default with the ones from hte given props
+	defaults.update(props)
+
+	component = component[curr_start:]
+
+	for name in defaults:
+		component = component.replace(f"~{name}~", defaults[name])
+
+		# start checking from next line
+	return component
+
+
 # command CR 'base' 'target' 'source/s'
 def main():
 	num = len(sys.argv)
@@ -73,36 +125,49 @@ def main():
 		print(base_path + " is a directory, doing nothing")
 		exit(1)
 
-	for i in range(len(components_names)):
-		# simple conponent withou props and closing />
+	repetition = 0
+	changes = 0
+	while True:
+		for i in range(len(components_names)):
+			# simple conponent withou props and closing />
 
-		comp_pos_start = base_file.find("<" + components_names[i])
+			comp_pos_start = base_file.find("<" + components_names[i])
 
-		if comp_pos_start == -1:
-			continue
+			if comp_pos_start == -1:
+				continue
 
-		comp_pos_end = base_file[comp_pos_start:].find("/>") + comp_pos_start  # ignore the /> on purpuse
+			# ignore the /> on purpuse
+			comp_pos_end = base_file[comp_pos_start:].find("/>") + comp_pos_start
 
-		comp_tag: str = base_file[comp_pos_start:comp_pos_end]
+			comp_tag: str = base_file[comp_pos_start + 1:comp_pos_end]
 
-		props: dict[str, str] = {}
+			# collect all of the props defined in the component use
+			props: dict[str, str] = {}
 
-		elements = comp_tag.split()
+			elements = comp_tag.split()
 
-		# print(elements, comp_tag)
+			for el in elements:
+				parts = el.split("=", 1)
 
-		for el in elements:
-			parts = el.split("=")
+				if len(parts) == 2:
+					props[parts[0]] = parts[1]
 
-			if len(parts) == 2:
-				props[parts[0]] = parts[1]
+			compiled_component = get_compiled_component(components_content[i], props)
 
-		new_comp = components_content[i]
+			base_file = base_file.replace(base_file[comp_pos_start:comp_pos_end + 2], "\n" + compiled_component)
 
-		for name in props:
-			new_comp = new_comp.replace(f"~{name}~", props[name])
+			# we count any repacing as a change
+			changes += 1
 
-		base_file = base_file.replace(base_file[comp_pos_start:comp_pos_end + 2],"\n" + new_comp)
+		# stop only if there are no more changes or if the max recursion limit has been hit
+		if changes == 0:
+			break
+
+		# or stops if we made to many passages (prolly a recursive component)
+		if repetition > MAX_REPETITIONS:
+			print(f"{COLORS.FG_YELLOW}Stopped replacing components due to exceeding the max repetion count of {MAX_REPETITIONS}.{COLORS.RESET}")
+			break
+		repetition += 1
 
 	with open(output_path, "w+") as f:
 		f.write(base_file)
