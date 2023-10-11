@@ -162,6 +162,7 @@ def main():
 		# stop only if there are no more changes or if the max recursion limit has been hit
 		if changes == 0:
 			break
+		changes = 0
 
 		# or stops if we made to many passages (prolly a recursive component)
 		if repetition > MAX_REPETITIONS:

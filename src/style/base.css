@@ -82,6 +82,13 @@ a:hover {
 	border: solid black
 }
 
+.feature-table th, td {
+	margin-left: none;
+	margin-right: none;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
 .form-spacer {
 	padding: 2vh;
 	margin-top: 2vh;
